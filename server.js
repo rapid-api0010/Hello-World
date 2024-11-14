@@ -1,10 +1,8 @@
-const express = require('express');
-const app = express();
+from fastapi import FastAPI
 
-app.get('/hello', (req, res) => {
-  res.json({ message: 'Hello, World123!' });
-});
+app = FastAPI()
 
-app.listen(3000, () => {
-  console.log('Server running on http://localhost:3000');
-});
+@app.get("/hello")
+async def read_hello():
+    return {"message": "Hello, World123!"}
+
