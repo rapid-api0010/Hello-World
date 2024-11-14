@@ -1,6 +1,6 @@
 # wrangler.toml
 
-name = "my-fastapi-app" # Name of your Cloudflare Worker
+name = "terabox-api" # Name of your Cloudflare Worker
 type = "javascript" # Specifies the worker type; necessary for Python compatibility
 
 # Entry-point of your FastAPI application
@@ -8,3 +8,6 @@ main = "./main.py"  # Replace with the actual path to your main file
 
 workers_dev = true # Set to `true` for development deployment
 compatibility_date = "2024-11-14" # Use today's date or the date of initial deployment
+
+# Enable Python compatibility flag
+compatibility_flags = ["python_workers"]
